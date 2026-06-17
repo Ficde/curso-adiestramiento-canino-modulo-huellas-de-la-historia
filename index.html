@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espacio de Repaso - MOD Huellas de la historia</title>
+    <title>Espacio de Repaso - MOD Huellas d la historia</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -383,7 +383,7 @@
                 <img src="logo.png" alt="FICDE" class="logo-img" onerror="this.style.display='none'; document.getElementById('altLogo').style.display='block'">
                 <h2 id="altLogo" style="display:none; color:white; font-weight:800;">FICDE</h2>
             </div>
-            <div class="module-tag">Módulo: Huellas de la historia</div>
+            <div class="module-tag">Módulo: Huellas de la Historia</div>
         </header>
 
         <div id="selectionScreen">
@@ -392,7 +392,7 @@
                     <img src="personaje.gif" alt="Fede">
                 </div>
                 <h1 class="welcome-title">Espacio de Repaso Interactivo</h1>
-                <p style="color: var(--texto-secundario); font-size: 1.1rem;">Donde el conocimiento se convierte en acción</p>
+                <p style="color: var(--texto-secundario); font-size: 1.1rem;">Origen del perro, selección y características de la especie</p>
             </div>
 
             <div class="blocks-grid">
@@ -411,7 +411,7 @@
                 <div class="block-card" onclick="startModule('escenarios')">
                     <div class="block-icon">🎬</div>
                     <div class="block-title">Escenarios</div>
-                    <div class="block-desc">Situaciones reales relacionadas con las características individuales del perro y su forma de responder al adiestramiento.</div>
+                    <div class="block-desc">Situaciones reales relacionadas con las características individuales del perro y su forma de responder al entrenamiento.</div>
                 </div>
 
                 <div class="block-card" onclick="startModule('practica')">
@@ -529,7 +529,7 @@
                     explanation: 'El perro doméstico se originó a partir de un proceso de domesticación en el que algunos lobos comenzaron a acercarse a los humanos, iniciando una relación evolutiva que dio lugar a la especie actual.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['domestic', 'evoluc', 'human'];
+                        const roots = ['domestic', 'evoluc', 'human', 'lob', 'espec', 'actual'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -542,7 +542,7 @@
                     explanation: 'La autodomesticación explica que algunos animales se adaptaron voluntariamente a convivir con los humanos, obteniendo beneficios mutuos y desarrollando cambios conductuales y físicos.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['autodomestic', 'adapt', 'conviv'];
+                        const roots = ['autodomestic', 'adapt', 'conviv', 'human', 'benefici', 'mutu', 'conduct'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -569,7 +569,7 @@
                     explanation: 'A lo largo del tiempo el perro pasó de ser un animal de trabajo a cumplir múltiples funciones, adaptándose a las necesidades humanas y modificando su conducta y apariencia.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['histori', 'adapt', 'funcion'];
+                        const roots = ['histori', 'adapt', 'funcion', 'trabaj', 'necesid', 'conduct', 'aparienc'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -592,7 +592,7 @@
                     explanation: 'El estándar es la descripción oficial que establece cómo debe ser una raza en cuanto a forma, tamaño y comportamiento.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['estandar', 'caracteristic', 'raz'];
+                        const roots = ['estandar', 'caracteristic', 'raz', 'oficial', 'describ', 'comport'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -619,7 +619,7 @@
                     explanation: 'La cinofilia es la actividad dedicada al estudio, cría y registro de las razas caninas mediante organizaciones especializadas.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['cinofili', 'raz', 'registr'];
+                        const roots = ['cinofili', 'raz', 'registr', 'estudi', 'cri', 'organiz'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -627,11 +627,11 @@
                     type: 'traffic',
                     badge: 'FCA',
                     title: 'Función',
-                    instruction: 'Indica si la afirmación es correcta:<br><br><b>La Federación Cinológica registra perros de raza.</b>',
+                    instruction: 'Indica si la afirmación es correcta: La Federación Cinológica registra perros de raza.',
                     items: [
                         { text: 'Correcto', color: 'green' },
-                        { text: 'Depende.', color: 'red' },
-                        { text: 'Incorrecto.', color: 'red' }
+                        { text: 'Incorrecto', color: 'red' },
+                        { text: 'Depende', color: 'red' }
                     ].sort(() => Math.random() - 0.5),
                     tutor: 'Lleva registros.',
                     explanation: 'La Federación Cinológica se encarga de registrar perros de raza y emitir certificados genealógicos.'
@@ -645,7 +645,7 @@
                     explanation: 'El perro posee características biológicas y conductuales propias que lo definen como especie y determinan su forma de aprender y relacionarse.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['especi', 'conduct', 'caracteristic'];
+                        const roots = ['espec', 'conduct', 'caracteristic', 'biolog', 'aprend', 'relacion'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 }
@@ -660,7 +660,7 @@
                     explanation: 'La selección por belleza prioriza la apariencia física, mientras que la selección por función busca habilidades útiles, lo que puede afectar el comportamiento y la salud del perro.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['seleccion', 'bellez', 'funcion'];
+                        const roots = ['seleccion', 'bellez', 'funcion', 'aparienc', 'habilid', 'comport', 'salud'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -673,7 +673,7 @@
                     explanation: 'La selección de características físicas específicas puede provocar enfermedades hereditarias, ya que se reduce la variabilidad genética.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['genetic', 'seleccion', 'salud'];
+                        const roots = ['genetic', 'seleccion', 'salud', 'enfermed', 'heredit', 'variabil'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -700,7 +700,7 @@
                     explanation: 'Los perros mestizos suelen tener mayor variabilidad genética, lo que puede reducir problemas hereditarios en comparación con algunas razas puras.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['raz', 'mestiz', 'variabil'];
+                        const roots = ['raz', 'mestiz', 'variabil', 'genetic', 'heredit'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -723,7 +723,7 @@
                     explanation: 'El perro es social porque necesita interactuar con otros individuos y organizarse en grupos para sobrevivir y aprender.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['social', 'grup', 'cooper'];
+                        const roots = ['social', 'grup', 'cooper', 'interact', 'sobreviv', 'aprend'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -750,7 +750,7 @@
                     explanation: 'La jerarquía permite organizar el grupo y facilita la convivencia, ya que el perro entiende su lugar dentro de la estructura social.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['jerarqui', 'orden', 'grup'];
+                        const roots = ['jerarqui', 'orden', 'grup', 'organiz', 'conviv', 'estruct', 'social'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -758,11 +758,11 @@
                     type: 'traffic',
                     badge: 'Depredador colaborativo',
                     title: 'Trabajo en grupo',
-                    instruction: 'Indica si la afirmación es correcta:<br><br><b>El perro está preparado para trabajar junto a otros individuos.</b>',
+                    instruction: 'Indica si la afirmación es correcta: El perro está preparado para trabajar junto a otros individuos.',
                     items: [
                         { text: 'Correcto', color: 'green' },
-                        { text: 'Depende.', color: 'red' },
-                        { text: 'Incorrecto.', color: 'red' }
+                        { text: 'Incorrecto', color: 'red' },
+                        { text: 'Depende', color: 'red' }
                     ].sort(() => Math.random() - 0.5),
                     tutor: 'No trabaja solo.',
                     explanation: 'El perro es un depredador colaborativo, lo que significa que puede coordinar acciones con otros individuos.'
@@ -776,7 +776,7 @@
                     explanation: 'Conocer los instintos permite entender cómo aprende el perro y adaptar el entrenamiento a sus características naturales.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['instint', 'conduct', 'aprendizaj'];
+                        const roots = ['instint', 'conduct', 'aprend', 'adapt', 'entren', 'natur'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 }
@@ -791,7 +791,7 @@
                     explanation: 'La neotenia permite que el perro conserve conductas juveniles durante la vida adulta, lo que facilita el aprendizaje y la adaptación al entorno.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['neoteni', 'aprendizaj', 'conduct'];
+                        const roots = ['neoteni', 'aprendiz', 'conduct', 'juven', 'adult', 'adapt', 'entorn'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -799,11 +799,11 @@
                     type: 'traffic',
                     badge: 'Relación con humanos',
                     title: 'Interacción',
-                    instruction: 'Indica si la afirmación es correcta:<br><br><b>El perro tiene capacidad natural para interactuar con las personas.</b>',
+                    instruction: 'Indica si la afirmación es correcta: El perro tiene capacidad natural para interactuar con las personas.',
                     items: [
                         { text: 'Correcto', color: 'green' },
-                        { text: 'Depende.', color: 'red' },
-                        { text: 'Incorrecto.', color: 'red' }
+                        { text: 'Incorrecto', color: 'red' },
+                        { text: 'Depende', color: 'red' }
                     ].sort(() => Math.random() - 0.5),
                     tutor: 'Es una especie social.',
                     explanation: 'El perro posee gran capacidad para interactuar con humanos debido a su evolución junto a nuestra especie.'
@@ -817,7 +817,7 @@
                     explanation: 'La atención permite que el perro se concentre en los estímulos correctos y pueda aprender órdenes y conductas nuevas.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['atenci', 'aprendizaj', 'respuest'];
+                        const roots = ['atencion', 'aprendiz', 'respuest', 'concentr', 'estimul', 'orden'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -844,7 +844,7 @@
                     explanation: 'El umbral de respuesta indica la intensidad del estímulo necesaria para que el perro reaccione, lo que influye en su comportamiento.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['umbral', 'reacci', 'estimul'];
+                        const roots = ['umbral', 'reaccion', 'estimul', 'sensibil', 'intens', 'comport'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -852,11 +852,11 @@
                     type: 'traffic',
                     badge: 'Iniciativa',
                     title: 'Conducta activa',
-                    instruction: 'Indica si la afirmación es correcta:<br><br><b>Un perro con iniciativa suele actuar sin esperar órdenes.</b>',
+                    instruction: 'Indica si la afirmación es correcta: Un perro con iniciativa suele actuar sin esperar órdenes.',
                     items: [
                         { text: 'Correcto', color: 'green' },
-                        { text: 'Depende.', color: 'red' },
-                        { text: 'Incorrecto.', color: 'red' }
+                        { text: 'Incorrecto', color: 'red' },
+                        { text: 'Depende', color: 'red' }
                     ].sort(() => Math.random() - 0.5),
                     tutor: 'Actúa por sí mismo.',
                     explanation: 'La iniciativa describe la tendencia del perro a actuar por cuenta propia, lo que puede ser útil o problemático según la situación.'
@@ -870,7 +870,7 @@
                     explanation: 'La adaptabilidad permite que el perro pueda ajustarse a nuevos ambientes, personas o tareas sin generar estrés excesivo.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['adapt', 'cambi', 'aprendizaj'];
+                        const roots = ['adaptabil', 'cambi', 'aprendiz', 'ajust', 'ambient', 'estres'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -897,7 +897,7 @@
                     explanation: 'El coraje indica estabilidad y seguridad ante situaciones nuevas, lo que favorece el control y el aprendizaje.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['coraj', 'segur', 'conduct'];
+                        const roots = ['coraj', 'segur', 'conduct', 'estabil', 'situac', 'control', 'aprend'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -905,11 +905,11 @@
                     type: 'traffic',
                     badge: 'Solidez',
                     title: 'Estabilidad emocional',
-                    instruction: 'Indica si la afirmación es correcta:<br><br><b>Un perro sólido mantiene su conducta ante diferentes situaciones.</b>',
+                    instruction: 'Indica si la afirmación es correcta: Un perro sólido mantiene su conducta ante diferentes situaciones.',
                     items: [
                         { text: 'Correcto', color: 'green' },
-                        { text: 'Depende.', color: 'red' },
-                        { text: 'Incorrecto.', color: 'red' }
+                        { text: 'Incorrecto', color: 'red' },
+                        { text: 'Depende', color: 'red' }
                     ].sort(() => Math.random() - 0.5),
                     tutor: 'No se altera fácil.',
                     explanation: 'La solidez describe la estabilidad emocional del perro, permitiendo respuestas equilibradas ante distintos estímulos.'
@@ -939,7 +939,7 @@
                     explanation: 'Evaluar el temperamento permite adaptar el entrenamiento a las características individuales del perro.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['evaluac', 'temperament', 'conduct'];
+                        const roots = ['evalu', 'temperament', 'conduct', 'adapt', 'entren', 'caracteristic'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -948,7 +948,7 @@
                     anyOrder: false,
                     badge: 'Conducta individual',
                     title: 'Diferencias',
-                    instruction: 'Completa la frase:<br><br>Cada perro tiene un ______ propio que influye en su forma de aprender.',
+                    instruction: 'Completa la frase.<br><br>Cada perro tiene un ______ propio que influye en su forma de aprender.',
                     blanks: ['temperamento'],
                     tutor: 'Rasgo personal.',
                     explanation: 'El temperamento define la forma en que cada perro responde a los estímulos y aprende nuevas conductas.'
@@ -957,11 +957,11 @@
                     type: 'traffic',
                     badge: 'Observación',
                     title: 'Interpretación',
-                    instruction: 'Indica si la afirmación es correcta:<br><br><b>Observar la conducta del perro ayuda a elegir el método de adiestramiento.</b>',
+                    instruction: 'Indica si la afirmación es correcta: Observar la conducta del perro ayuda a elegir el método de adiestramiento.',
                     items: [
                         { text: 'Correcto', color: 'green' },
-                        { text: 'Depende.', color: 'red' },
-                        { text: 'Incorrecto.', color: 'red' }
+                        { text: 'Incorrecto', color: 'red' },
+                        { text: 'Depende', color: 'red' }
                     ].sort(() => Math.random() - 0.5),
                     tutor: 'Primero observar.',
                     explanation: 'La observación permite seleccionar el método adecuado según el comportamiento del perro.'
@@ -975,7 +975,7 @@
                     explanation: 'Cada perro tiene características individuales que influyen en su aprendizaje, por lo que el entrenamiento debe adaptarse a cada caso.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['individu', 'diferenc', 'entren'];
+                        const roots = ['individual', 'diferenc', 'entren', 'caracteristic', 'aprend'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -1002,7 +1002,7 @@
                     explanation: 'Elegir el perro adecuado según su carácter permite una mejor convivencia y facilita el proceso de adiestramiento.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['caract', 'seleccion', 'adapt'];
+                        const roots = ['caracter', 'seleccion', 'adapt', 'elegir', 'conviv', 'adiestram'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -1010,11 +1010,11 @@
                     type: 'traffic',
                     badge: 'Conducta y ambiente',
                     title: 'Influencia',
-                    instruction: 'Indica si la afirmación es correcta:<br><br><b>El ambiente influye en el comportamiento del perro.</b>',
+                    instruction: 'Indica si la afirmación es correcta: El ambiente influye en el comportamiento del perro.',
                     items: [
                         { text: 'Correcto', color: 'green' },
-                        { text: 'Depende.', color: 'red' },
-                        { text: 'Incorrecto.', color: 'red' }
+                        { text: 'Incorrecto', color: 'red' },
+                        { text: 'Depende', color: 'red' }
                     ].sort(() => Math.random() - 0.5),
                     tutor: 'No solo genética.',
                     explanation: 'El comportamiento del perro depende tanto de su genética como del ambiente en el que se desarrolla.'
@@ -1028,7 +1028,7 @@
                     explanation: 'Interpretar correctamente la reacción del perro permite comprender sus necesidades y mejorar el entrenamiento.',
                     validation: (raw) => {
                         const v = normalizar(raw);
-                        const roots = ['reacci', 'interpretac', 'conduct'];
+                        const roots = ['reaccion', 'interpret', 'conduct', 'compren', 'necesid', 'entren'];
                         return roots.filter(r => v.includes(r)).length >= 2;
                     }
                 },
@@ -1088,7 +1088,7 @@
                 // Reproducir "lolograste.mp3" al terminar TODAS las preguntas
                 playAudio('lolograste');
                 playSound('success');
-                alert('¡Excelente! Completaste este bloque.');
+                alert('¡Excelente! Completaste este bloque de repaso.');
                 setTimeout(() => {
                     location.reload();
                 }, 2000);
@@ -1114,6 +1114,7 @@
                 });
                 html += `</div>`;
             } else if (data.type === 'traffic') {
+                trafficAns = {};
                 data.items.forEach((item, i) => {
                     html += `<div class="traffic-row" id="row-${i}">
                                 <span>${item.text}</span>
@@ -1232,11 +1233,11 @@
                 if (attemptCount < 2) {
                     playAudio('error1');
                     feedback.className = 'feedback-area feedback-retry';
-                    feedback.innerHTML = `<strong>Buen intento.</strong> Revisá tu respuesta. Pista: ${data.tutor}`;
+                    feedback.innerHTML = `<strong>Buen intento.</strong> Revisa tu respuesta. Pista: ${data.tutor}`;
                 } else {
                     playAudio('error2');
                     feedback.className = 'feedback-area feedback-fail';
-                    feedback.innerHTML = `<strong>No pasa nada, aprendamos juntos:</strong><br>${data.explanation}`;
+                    feedback.innerHTML = `<strong>Sigamos adelante para aprender juntos:</strong><br>${data.explanation}`;
                     document.getElementById('btnCheck').innerText = 'Entendido, continuar →';
                     document.getElementById('btnCheck').onclick = () => { currentIndex++; loadActivity(); };
                 }
@@ -1244,7 +1245,6 @@
         }
 
         function replayTutorMessage() {
-            // Replay del último audio de módulo reproducido
             if (lastAudioModule) {
                 const audioKey = moduloAudioMap[lastAudioModule];
                 if (audioKey) {
